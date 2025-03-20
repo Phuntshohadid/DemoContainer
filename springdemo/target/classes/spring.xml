@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    
+
+    <!-- bean definitions here -->
+
+    <bean id = "alien" class = "bt.edu.gcit.Alien" autowire="byType">
+    <!-- <bean id = "alien" class = "bt.edu.gcit.Alien" autowire="byName"> -->
+
+
+    <!-- inner bean - scope os limited-->
+    <property name = "comp">
+        <bean id = "comp" class = "bt.edu.gcit.Laptop">
+        </bean>
+
+    </property>
+
+
+        <!-- <property name = "age" value ="32"> </property>
+        <property name = "lap" ref ="laptop"> </property> -->
+
+<!-- no sequence needed = type ="bt.edu.gcit.Laptop"-->
+        <!-- <constructor-arg type ="bt.edu.gcit.Laptop" ref = "laptop" /> -->
+        
+        <!-- <constructor-arg value = "32" />
+        
+
+
+        <constructor-arg ref = "desktop" />
+        <constructor-arg value = "32000" /> -->
+        
+
+        
+
+
+    </bean>
+    <!-- <bean id = "alien" class = "bt.edu.gcit.Alien">
+    </bean> -->
+
+
+    <!-- <bean id = "lap" class = "bt.edu.gcit.Laptop">
+    </bean> -->
+    
+     <!-- <bean id = "comp" class = "bt.edu.gcit.Laptop" lazy-init = "true">
+    </bean> -->
+    <!-- <bean id = "comp" class = "bt.edu.gcit.Desktop" primary ="true">
+    </bean> -->
+
+
+
+    <!-- <bean id = "desktop" class = "bt.edu.gcit.Desktop">
+    </bean> -->
+
+</beans>
