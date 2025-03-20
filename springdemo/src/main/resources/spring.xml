@@ -14,7 +14,7 @@
 
     <!-- inner bean - scope os limited-->
     <property name = "comp">
-        <bean id = "comp" class = "bt.edu.gcit.Laptop">
+        <bean id = "comp" class = "bt.edu.gcit.Desktop">
         </bean>
 
     </property>

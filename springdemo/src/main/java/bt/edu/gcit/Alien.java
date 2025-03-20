@@ -1,10 +1,23 @@
 package bt.edu.gcit;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;;
 
+@Component 
+@Scope("prototype")
 public class Alien {
 
+    @Value("32")
     private int age;
     private Laptop lap;
+
+    @Value("3244444")
     private int salary;
+
+    @Autowired
+    @Qualifier("laptop")
     private Computer comp;
     
 
@@ -47,7 +60,7 @@ public class Alien {
     // }
 
     public Alien(){
-        System.out.println("alien obj created");
+        System.out.println("Alien obj created");
 
     }
 
